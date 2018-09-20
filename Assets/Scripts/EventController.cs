@@ -1,35 +1,35 @@
 ﻿using UnityEngine;
-using Valve.VR.InteractionSystem;
 
 public class EventController : MonoBehaviour {
 
     #region PUBLIC Variables
-
     public GameObject contextMenuSystem;
     public GameObject parabolicPointer;
 
-    [HideInInspector]
-    public GameObject collidingObject;
+    [Header("Controllers")]
+    public GameObject left;
+    public GameObject right;
 
     public enum States { freeRoam, objectHighlighted, objectInHand, menuActive };
     public States myState;
 
     [HideInInspector]
-    public bool menuOpen = false;
+    public GameObject collidingObject;
 
+    [HideInInspector]
+    public bool menuOpen = false;
+    [HideInInspector]
+    public bool touchpadPressed = false;
     #endregion
 
     #region PRIVATE Variables
-
     private bool parabolicPointerOn = true;
     private bool laserPointerOn = false;
-
-
     #endregion
 
-    private void Update() {
 
-
+    private void Update() {        
+        
         if (menuOpen) {
             myState = States.menuActive;
         }
@@ -43,6 +43,7 @@ public class EventController : MonoBehaviour {
                 // IF there is a colliding object
                 if (collidingObject) {
                     objectInEitherHand = true;
+                    //print(collidingObject);
                 }
             }
             if (!objectInEitherHand) {
@@ -62,27 +63,28 @@ public class EventController : MonoBehaviour {
                 TurnOffParabolicPointer();
             }
 
-            //if (controller.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad)) {
+            
+            if (touchpadPressed) {
+                touchpadPressed = false;
+                if (!menuOpen) {
 
-            //    if (!menuOpen) {
+                    GameObject menuInScene = GameObject.FindGameObjectWithTag("ContextMenuSystem");
 
-            //        GameObject menuInScene = GameObject.FindGameObjectWithTag("ContextMenuSystem");
+                    //If there is not menuInScene already, go ahead and create teh contextMenu gameobject.
+                    if (menuInScene == null) {
+                        GameObject contextMenu = Instantiate(contextMenuSystem) as GameObject;
+                        Vector3 offsetPos = new Vector3(0, 0.25f, 0.25f);
 
-            //        //If there is not menuInScene already, go ahead and create teh contextMenu gameobject.
-            //        if (menuInScene == null) {
-            //            GameObject contextMenu = (GameObject)Instantiate(contextMenuSystem);
-            //            Vector3 offsetPos = new Vector3(0, 0.25f, 0.25f);
+                        // the "Controller.transform.pos" was changed from "collidingObject.transform.position".
+                        // This could screw up the placement of the "UI Context Menu Sysem".
+                        Vector3 newPos = collidingObject.transform.position + offsetPos;
+                        contextMenu.transform.position = newPos;
 
-            //            // the "Controller.transform.pos" was changed from "collidingObject.transform.position".
-            //            // This could screw up the placement of the "UI Context Menu Sysem".
-            //            Vector3 newPos = Controller.transform.pos + offsetPos;
-            //            contextMenu.transform.position = newPos;
-
-            //            myState = States.menuActive;
-            //            menuOpen = true;
-            //        }
-            //    }
-            //}
+                        myState = States.menuActive;
+                        menuOpen = true;
+                    }
+                }
+            }
 
 
         } else if (myState == States.objectInHand) {

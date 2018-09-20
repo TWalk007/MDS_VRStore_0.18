@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Valve.VR.InteractionSystem;
 
 
 public class ControllerGrabObject : MonoBehaviour {
@@ -99,7 +98,12 @@ public class ControllerGrabObject : MonoBehaviour {
                 ReleaseObject();
             }
         }
-    }
 
+        if (eventController.myState == EventController.States.objectHighlighted) {
+            if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad)) {
+                eventController.touchpadPressed = true;
+            }
+        }        
+    }
 
 }
