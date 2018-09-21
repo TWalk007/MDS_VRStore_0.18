@@ -154,16 +154,25 @@ public class SteamVR_LaserPointer : MonoBehaviour {
 
     // This is a controller event subscription.  It executes when the event takes place.
     private void PadUnclicked(object sender, ClickedEventArgs e) {
-
-        if (eventController.button) {
-            if (eventController.button.name == "EXIT") {
+        Button menuButton = eventController.button;
+        if (menuButton) {
+            if (menuButton.name == "EXIT") {
                 Destroy(GameObject.FindGameObjectWithTag("ContextMenuSystem"));
                 eventController.menuOpen = false;
                 eventController.myState = EventController.States.freeRoam;
                 eventController.laserHolderOff = false;
                 eventController.TurnOffLaserPointer();
+            } else if (menuButton.name == "BACK") {
+                eventController.contextMenuSystem.GetComponent<ContextMenuSystem>().menuState = ContextMenuSystem.MenuStates.level_1;
+            } else if (menuButton.name == "NEXT") {
+                if (eventController.contextMenuSystem.GetComponent<ContextMenuSystem>().menuState == ContextMenuSystem.MenuStates.level_1) {
+                    eventController.contextMenuSystem.GetComponent<ContextMenuSystem>().menuState = ContextMenuSystem.MenuStates.level_2;
+                }
+            } else if (menuButton.name == "PLUS") {
+                // Grow selection
+            } else if (menuButton.name == "MINUS") {
+                // Shrink selection.
             }
         }
-        //eventController.contextMenuSystem.GetComponent<ContextMenuSystem>().ExitButton();
     }
 }

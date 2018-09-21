@@ -600,6 +600,14 @@ MonoBehaviour:
   nextButton: {fileID: 114305572606589896}
   plusButton: {fileID: 114282556485876008}
   minusButton: {fileID: 114196346715275158}
+  colorBlock:
+    m_NormalColor: {r: 0.24586153, g: 0.37724802, b: 0.6132076, a: 1}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_DisabledColor: {r: 0.24586153, g: 0.37724802, b: 0.6132076, a: 1}
+    m_ColorMultiplier: 0
+    m_FadeDuration: 0
+  menuState: 1
 --- !u!114 &114665951129926214
 MonoBehaviour:
   m_ObjectHideFlags: 1

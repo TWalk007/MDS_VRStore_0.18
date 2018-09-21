@@ -12,6 +12,7 @@ TagManager:
   - ContextMenuSystem
   - CleanButton
   - Event Controller
+  - Laser
   layers:
   - Default
   - TransparentFX

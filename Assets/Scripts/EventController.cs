@@ -125,14 +125,14 @@ public class EventController : MonoBehaviour {
 
     private void TurnOnLaserPointer() {
         laserPointerOn = true;
-        if (left != null) {
+        if (left != null && left.activeSelf) {
             left.GetComponent<SteamVR_LaserPointer>().enabled = true;
             if (left.GetComponent<SteamVR_LaserPointer>().holder) {
                 GameObject holder = left.GetComponent<SteamVR_LaserPointer>().holder;
                 holder.SetActive(true);
             }
         }
-        if (right != null) {
+        if (right != null && right.activeSelf) {
             right.GetComponent<SteamVR_LaserPointer>().enabled = true;
             if (right.GetComponent<SteamVR_LaserPointer>().holder) {
                 GameObject holder = right.GetComponent<SteamVR_LaserPointer>().holder;
@@ -141,13 +141,19 @@ public class EventController : MonoBehaviour {
         }
     }
 
-    public void TurnOffLaserPointer() {        
-        left.GetComponent<SteamVR_LaserPointer>().enabled = false;
-        right.GetComponent<SteamVR_LaserPointer>().enabled = false;
-        if (!laserHolderOff) {
-            left.GetComponent<SteamVR_LaserPointer>().holder.SetActive(false);
-            right.GetComponent<SteamVR_LaserPointer>().holder.SetActive(false);            
+    public void TurnOffLaserPointer() {
+        if (left != null && left.activeSelf) {
+            left.GetComponent<SteamVR_LaserPointer>().enabled = false;
+            if (!laserHolderOff) {                
+                left.GetComponent<SteamVR_LaserPointer>().holder.SetActive(false);
+            }
         }
+        if (right != null && right.activeSelf) {
+            right.GetComponent<SteamVR_LaserPointer>().enabled = false;
+            if (!laserHolderOff) {
+                right.GetComponent<SteamVR_LaserPointer>().holder.SetActive(false);
+            }
+        }           
         laserHolderOff = true;
         laserPointerOn = false;
     }

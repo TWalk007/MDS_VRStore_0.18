@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ContextMenuSystem : MonoBehaviour {
 
@@ -9,10 +10,13 @@ public class ContextMenuSystem : MonoBehaviour {
     public Button plusButton;
     public Button minusButton;
 
+    public ColorBlock colorBlock;
 
+    public enum MenuStates { level_1, level_2 };
+    public MenuStates menuState;
 
     private SteamVR_TrackedObject trackedObj;
-
+    private ColorBlock startingColors;
     private GameObject canvasObj;
     private EventController eventController;
     private SteamVR_Controller.Device Controller {
@@ -24,8 +28,25 @@ public class ContextMenuSystem : MonoBehaviour {
     }
 
     void Start() {        
-        canvasObj = transform.GetChild(0).gameObject;        
+        canvasObj = transform.GetChild(0).gameObject;
+        startingColors = backButton.colors;
     }
+
+    private void Update() {
+        if (menuState == MenuStates.level_1) {
+            backButton.colors = colorBlock;
+            minusButton.colors = colorBlock;
+            plusButton.colors = startingColors;
+        }
+
+        if (menuState == MenuStates.level_2) {
+            backButton.colors = startingColors;
+            minusButton.colors = startingColors;
+            plusButton.colors = colorBlock;
+        }
+    }
+
+
 
     public void ExitButton() {
         eventController = GameObject.FindGameObjectWithTag("Event Controller").GetComponent<EventController>();
