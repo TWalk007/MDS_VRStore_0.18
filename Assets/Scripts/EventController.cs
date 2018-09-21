@@ -120,14 +120,8 @@ public class EventController : MonoBehaviour {
     private void TurnOnLaserPointer() {
         laserPointerOn = true;
 
-        // Write a script here that creates an array of the controllers and then loop through
-        // to turn on their laser pointer components.
-
-        GameObject[] controllers = GameObject.FindGameObjectsWithTag("Controllers");
-        foreach (GameObject obj in controllers) {
-            gameObject.GetComponent<SteamVR_LaserPointer>().enabled = true;
-            gameObject.GetComponent<VRInteractableUI>().enabled = true;
-        }
+        left.GetComponent<SteamVR_LaserPointer>().enabled = true;
+        right.GetComponent<SteamVR_LaserPointer>().enabled = true;
     }
 
 
