@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class EventController : MonoBehaviour {
 
@@ -15,7 +16,8 @@ public class EventController : MonoBehaviour {
 
     [HideInInspector]
     public GameObject collidingObject;
-
+    [HideInInspector]
+    public Button button;
     [HideInInspector]
     public bool menuOpen = false;
     [HideInInspector]
@@ -119,11 +121,11 @@ public class EventController : MonoBehaviour {
 
     private void TurnOnLaserPointer() {
         laserPointerOn = true;
-
-        left.GetComponent<SteamVR_LaserPointer>().enabled = true;
-        right.GetComponent<SteamVR_LaserPointer>().enabled = true;
+        if (left != null) {
+            left.GetComponent<SteamVR_LaserPointer>().enabled = true;
+        }
+        if (right != null) {
+            right.GetComponent<SteamVR_LaserPointer>().enabled = true;
+        }        
     }
-
-
-
 }

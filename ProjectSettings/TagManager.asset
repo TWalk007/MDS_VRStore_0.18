@@ -9,6 +9,8 @@ TagManager:
   - Controllers
   - Button
   - BowlingObjects
+  - ContextMenuSystem
+  - CleanButton
   layers:
   - Default
   - TransparentFX
