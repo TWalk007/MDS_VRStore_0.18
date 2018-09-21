@@ -6,6 +6,8 @@ public class EventController : MonoBehaviour {
     #region PUBLIC Variables
     public GameObject contextMenuSystem;
     public GameObject parabolicPointer;
+    [Tooltip("Teleport Vive script should be found on the Camera (eye) object.")]
+    public TeleportVive teleportVive;
 
     [Header("Controllers")]
     public GameObject left;
@@ -22,6 +24,8 @@ public class EventController : MonoBehaviour {
     public bool menuOpen = false;
     [HideInInspector]
     public bool touchpadPressed = false;
+    [HideInInspector]
+    public bool laserHolderOff = true;
     #endregion
 
     #region PRIVATE Variables
@@ -98,9 +102,7 @@ public class EventController : MonoBehaviour {
         } else if (myState == States.menuActive) {
             if (parabolicPointerOn) {
                 TurnOffParabolicPointer();
-            }
-
-            //One time activation of the laser pointer script.
+            }            
             if (!laserPointerOn) {
                 TurnOnLaserPointer();
             }
@@ -111,21 +113,42 @@ public class EventController : MonoBehaviour {
         parabolicPointer.SetActive(false);
         parabolicPointer.GetComponent<ParabolicPointer>().enabled = false;
         parabolicPointerOn = false;
+        teleportVive.CurrentTeleportState = TeleportState.Disabled;
     }
 
     private void TurnOnParabolicPointer() {
         parabolicPointer.SetActive(true);
         parabolicPointer.GetComponent<ParabolicPointer>().enabled = true;
         parabolicPointerOn = true;
+        teleportVive.CurrentTeleportState = TeleportState.None;
     }
 
     private void TurnOnLaserPointer() {
         laserPointerOn = true;
         if (left != null) {
             left.GetComponent<SteamVR_LaserPointer>().enabled = true;
+            if (left.GetComponent<SteamVR_LaserPointer>().holder) {
+                GameObject holder = left.GetComponent<SteamVR_LaserPointer>().holder;
+                holder.SetActive(true);
+            }
         }
         if (right != null) {
             right.GetComponent<SteamVR_LaserPointer>().enabled = true;
-        }        
+            if (right.GetComponent<SteamVR_LaserPointer>().holder) {
+                GameObject holder = right.GetComponent<SteamVR_LaserPointer>().holder;
+                holder.SetActive(true);
+            }
+        }
+    }
+
+    public void TurnOffLaserPointer() {        
+        left.GetComponent<SteamVR_LaserPointer>().enabled = false;
+        right.GetComponent<SteamVR_LaserPointer>().enabled = false;
+        if (!laserHolderOff) {
+            left.GetComponent<SteamVR_LaserPointer>().holder.SetActive(false);
+            right.GetComponent<SteamVR_LaserPointer>().holder.SetActive(false);            
+        }
+        laserHolderOff = true;
+        laserPointerOn = false;
     }
 }

@@ -37,11 +37,11 @@ public class SteamVR_LaserPointer : MonoBehaviour {
 
     private void OnEnable() {
         controller = GetComponent<SteamVR_TrackedController>();
-        //controller.PadUnclicked += PadUnclicked;
+        controller.PadUnclicked += PadUnclicked;
     }
 
     private void OnDisable() {
-        //controller.PadUnclicked -= PadUnclicked;
+        controller.PadUnclicked -= PadUnclicked;
     }
 
     
@@ -51,6 +51,7 @@ public class SteamVR_LaserPointer : MonoBehaviour {
         holder.transform.parent = this.transform;
         holder.transform.localPosition = Vector3.zero;
         holder.transform.localRotation = Quaternion.identity;
+        holder.tag = "Laser";
 
         pointer = GameObject.CreatePrimitive(PrimitiveType.Cube);
         pointer.transform.parent = holder.transform;
@@ -150,11 +151,19 @@ public class SteamVR_LaserPointer : MonoBehaviour {
             pointer.transform.localPosition = new Vector3(0f, 0f, dist / 2f);
         }
     }
-    
-    //private void PadUnclicked(object sender, ClickedEventArgs e) {
-    //    //print("PadUnclicked on " + sender);
-    //    if (!button) {
-    //        button.onClick.Invoke();
-    //    }
-    //}
+
+    // This is a controller event subscription.  It executes when the event takes place.
+    private void PadUnclicked(object sender, ClickedEventArgs e) {
+
+        if (eventController.button) {
+            if (eventController.button.name == "EXIT") {
+                Destroy(GameObject.FindGameObjectWithTag("ContextMenuSystem"));
+                eventController.menuOpen = false;
+                eventController.myState = EventController.States.freeRoam;
+                eventController.laserHolderOff = false;
+                eventController.TurnOffLaserPointer();
+            }
+        }
+        //eventController.contextMenuSystem.GetComponent<ContextMenuSystem>().ExitButton();
+    }
 }

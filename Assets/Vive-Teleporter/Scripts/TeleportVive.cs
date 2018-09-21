@@ -46,7 +46,7 @@ public class TeleportVive : MonoBehaviour {
     /// None: The player is not using teleportation right now
     /// Selecting: The player is currently selecting a teleport destination (holding down on touchpad)
     /// Teleporting: The player has selected a teleport destination and is currently teleporting now (fading in/out)
-    public TeleportState CurrentTeleportState { get; private set; }
+    public TeleportState CurrentTeleportState { get; set; }
 
     private Vector3 LastClickAngle = Vector3.zero;
     private bool IsClicking = false;
@@ -251,6 +251,8 @@ public class TeleportVive : MonoBehaviour {
                 else if (!Pointer.PointOnNavMesh && IsClicking)
                     IsClicking = false;
             }
+        } else if (CurrentTeleportState == TeleportState.Disabled) {
+            // do nothing.
         }
         else //CurrentTeleportState == TeleportState.None
         {
@@ -298,5 +300,7 @@ public enum TeleportState
     /// The player is currently selecting a teleport destination (holding down on touchpad)
     Selecting,
     /// The player has selected a teleport destination and is currently teleporting now (fading in/out)
-    Teleporting
+    Teleporting,
+    /// disables this script temporarily.
+    Disabled
 }

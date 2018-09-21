@@ -18,21 +18,20 @@ public class ContextMenuSystem : MonoBehaviour {
     private SteamVR_Controller.Device Controller {
         get { return SteamVR_Controller.Input((int)trackedObj.index); }
     }
-
-
-
+    
     private void Awake() {
-        trackedObj = GetComponent<SteamVR_TrackedObject>();
+        trackedObj = GetComponent<SteamVR_TrackedObject>();        
     }
 
     void Start() {        
-        canvasObj = transform.GetChild(0).gameObject;
+        canvasObj = transform.GetChild(0).gameObject;        
     }
 
     public void ExitButton() {
+        eventController = GameObject.FindGameObjectWithTag("Event Controller").GetComponent<EventController>();
         eventController.myState = EventController.States.freeRoam;
         eventController.menuOpen = false;
-        Destroy(gameObject);
+        Destroy(this);
     }
 
 

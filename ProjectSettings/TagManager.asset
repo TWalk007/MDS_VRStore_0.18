@@ -11,6 +11,7 @@ TagManager:
   - BowlingObjects
   - ContextMenuSystem
   - CleanButton
+  - Event Controller
   layers:
   - Default
   - TransparentFX
