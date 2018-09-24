@@ -6,6 +6,7 @@ public class HighlightController : MonoBehaviour
     private Renderer rend;
 
     public bool objectInHand = false;
+    public bool highlightOn = false;
 
     public Material[] materials = new Material[2];
 

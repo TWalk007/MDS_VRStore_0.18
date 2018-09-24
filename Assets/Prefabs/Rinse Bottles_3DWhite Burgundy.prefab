@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 54580822238206658}
   - component: {fileID: 65757494342575522}
   - component: {fileID: 114670516628831124}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (7)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 33086375844995164}
   - component: {fileID: 23983118573465028}
   - component: {fileID: 95227153146187656}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_3DW Burgundy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 33650463591651698}
   - component: {fileID: 23482674980828504}
   - component: {fileID: 95985232887053428}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_3DW Burgundy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 33952702728062484}
   - component: {fileID: 23209696856443448}
   - component: {fileID: 95414572591733948}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_3DW Burgundy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 54755890919531722}
   - component: {fileID: 65342648776783466}
   - component: {fileID: 114970071893941882}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (3)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 33206725582765356}
   - component: {fileID: 23569278374241164}
   - component: {fileID: 95875877637911562}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_3DW Burgundy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 33086931235454366}
   - component: {fileID: 23085171260103684}
   - component: {fileID: 95378606728004942}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_3DW Burgundy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 33216147960974172}
   - component: {fileID: 23605361449518050}
   - component: {fileID: 95944449793894678}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_3DW Burgundy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4609774567439572}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottles_3DWhite Burgundy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,9 +181,9 @@ GameObject:
   - component: {fileID: 54021222558859282}
   - component: {fileID: 65770271494350282}
   - component: {fileID: 114478992161052136}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (4)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 33825806690757260}
   - component: {fileID: 23712450115010066}
   - component: {fileID: 95564096811818656}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_3DW Burgundy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,9 +217,9 @@ GameObject:
   - component: {fileID: 54913895729176284}
   - component: {fileID: 65220289841529216}
   - component: {fileID: 114602409468970218}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (1)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,9 +235,9 @@ GameObject:
   - component: {fileID: 54767609338042204}
   - component: {fileID: 65326734997396678}
   - component: {fileID: 114548803172394078}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (5)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,9 +253,9 @@ GameObject:
   - component: {fileID: 54252634371008022}
   - component: {fileID: 65608157178365396}
   - component: {fileID: 114794794948631466}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (6)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,9 +271,9 @@ GameObject:
   - component: {fileID: 54545882100315182}
   - component: {fileID: 65698857396926556}
   - component: {fileID: 114552635160856322}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,9 +289,9 @@ GameObject:
   - component: {fileID: 54559654347332288}
   - component: {fileID: 65616747545900244}
   - component: {fileID: 114055488229144180}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (2)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 33095391665350660}
   - component: {fileID: 23551934219160118}
   - component: {fileID: 95444664650898822}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_3DW Burgundy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,6 +1259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 7bfe986eb01a38a4fa12c4e396949627, type: 2}
   - {fileID: 2100000, guid: 9b692eb67e9f34348a9c586ce25ed41d, type: 2}
@@ -1274,6 +1275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 7bfe986eb01a38a4fa12c4e396949627, type: 2}
   - {fileID: 2100000, guid: 9b692eb67e9f34348a9c586ce25ed41d, type: 2}
@@ -1289,6 +1291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 7bfe986eb01a38a4fa12c4e396949627, type: 2}
   - {fileID: 2100000, guid: 9b692eb67e9f34348a9c586ce25ed41d, type: 2}
@@ -1304,6 +1307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 7bfe986eb01a38a4fa12c4e396949627, type: 2}
   - {fileID: 2100000, guid: 9b692eb67e9f34348a9c586ce25ed41d, type: 2}
@@ -1319,6 +1323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 7bfe986eb01a38a4fa12c4e396949627, type: 2}
   - {fileID: 2100000, guid: 9b692eb67e9f34348a9c586ce25ed41d, type: 2}
@@ -1334,6 +1339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 7bfe986eb01a38a4fa12c4e396949627, type: 2}
   - {fileID: 2100000, guid: 9b692eb67e9f34348a9c586ce25ed41d, type: 2}
@@ -1349,6 +1355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 7bfe986eb01a38a4fa12c4e396949627, type: 2}
   - {fileID: 2100000, guid: 9b692eb67e9f34348a9c586ce25ed41d, type: 2}
@@ -1364,6 +1371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 7bfe986eb01a38a4fa12c4e396949627, type: 2}
   - {fileID: 2100000, guid: 9b692eb67e9f34348a9c586ce25ed41d, type: 2}

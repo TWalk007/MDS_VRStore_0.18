@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class EventController : MonoBehaviour {
@@ -17,6 +18,10 @@ public class EventController : MonoBehaviour {
     public States myState;
 
     [HideInInspector]
+    public List<GameObject> shelfProducts = new List<GameObject>();
+    [HideInInspector]
+    public GameObject[] objects;
+    [HideInInspector]
     public GameObject collidingObject;
     [HideInInspector]
     public Button button;
@@ -32,10 +37,9 @@ public class EventController : MonoBehaviour {
     private bool parabolicPointerOn = true;
     private bool laserPointerOn = false;
     #endregion
+    
+    private void Update() {
 
-
-    private void Update() {        
-        
         if (menuOpen) {
             myState = States.menuActive;
         }
@@ -45,6 +49,7 @@ public class EventController : MonoBehaviour {
             //  THEN -> turn the freeRoam state back on.
             GameObject[] controllers = GameObject.FindGameObjectsWithTag("Controllers");
             bool objectInEitherHand = false;
+
             foreach (GameObject obj in controllers) {
                 // IF there is a colliding object
                 if (collidingObject) {
@@ -85,9 +90,18 @@ public class EventController : MonoBehaviour {
                         // This could screw up the placement of the "UI Context Menu Sysem".
                         Vector3 newPos = collidingObject.transform.position + offsetPos;
                         contextMenu.transform.position = newPos;
+                        ContextMenuSystem contextMenuScript = contextMenu.GetComponent<ContextMenuSystem>();
+                        contextMenuScript.menuState = ContextMenuSystem.MenuStates.level_1;
+
+                        TurnOffControllerBalls();
+
+                        contextMenuScript.objectInHand = collidingObject;
+
+                        shelfProducts.Add(collidingObject);
+                        collidingObject = null;
 
                         myState = States.menuActive;
-                        menuOpen = true;
+                        menuOpen = true;                       
                     }
                 }
             }
@@ -107,6 +121,32 @@ public class EventController : MonoBehaviour {
                 TurnOnLaserPointer();
             }
         }
+    }
+
+    public void TurnOffObjectHighlights() {
+        // Create a list of all objects that get highlighted.
+        // When finished working in the menu iterate through the list and unhighlight the items.
+        // Clear the List.
+        //print("Beginning to clear object highlights...");
+        foreach (var item in shelfProducts) {
+            Material unHighlightedMaterial = item.gameObject.GetComponent<HighlightController>().materials[0];
+            item.GetComponentInChildren<Renderer>().material = unHighlightedMaterial;
+            //print("Object " + item.name + " is no longer highlighted.");
+        }
+    }
+
+    public void ResetShelfProductsList() {
+        //foreach (var item in shelfProducts) {
+        //    print("Shelf Product List item: " + item.name + ".");
+        //}
+        //print("=============================================");
+        shelfProducts.Clear();
+        shelfProducts = new List<GameObject>();
+        //print("List is cleared.");
+        //print("=============================================");
+        //foreach (var item in shelfProducts) {
+        //    print("Shelf Product List item: " + item.name + ".");
+        //}
     }
 
     private void TurnOffParabolicPointer() {
@@ -156,5 +196,24 @@ public class EventController : MonoBehaviour {
         }           
         laserHolderOff = true;
         laserPointerOn = false;
+    }
+
+    private void TurnOffControllerBalls() {
+        MeshRenderer leftBallMesh = left.transform.Find("Controller Ball Left").gameObject.GetComponent<MeshRenderer>();
+        MeshRenderer rightBallMesh =  right.transform.Find("Controller Ball Right").gameObject.GetComponent<MeshRenderer>();
+        leftBallMesh.enabled = false;
+        rightBallMesh.enabled = false;
+        left.GetComponent<BoxCollider>().enabled = false;
+        right.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    public void TurnOnControllerBalls() {
+        MeshRenderer leftBallMesh = left.transform.Find("Controller Ball Left").gameObject.GetComponent<MeshRenderer>();
+        MeshRenderer rightBallMesh = right.transform.Find("Controller Ball Right").gameObject.GetComponent<MeshRenderer>();
+        leftBallMesh.enabled = true;
+        rightBallMesh.enabled = true;
+        left.GetComponent<BoxCollider>().enabled = true;
+        right.GetComponent<BoxCollider>().enabled = true;
+
     }
 }

@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class ContextMenuSystem : MonoBehaviour {
 
+    #region PUBLIC Variables
     [Header("Buttons")]
     public Button backButton;
     public Button nextButton;
@@ -15,21 +16,32 @@ public class ContextMenuSystem : MonoBehaviour {
     public enum MenuStates { level_1, level_2 };
     public MenuStates menuState;
 
-    private SteamVR_TrackedObject trackedObj;
+    [HideInInspector]
+    public GameObject objectInHand;
+    #endregion
+
+    #region PRIVATE Variables
+    private Material[] objectMaterials;
+
     private ColorBlock startingColors;
     private GameObject canvasObj;
+    private GameObject eventControllerGO;
     private EventController eventController;
-    private SteamVR_Controller.Device Controller {
-        get { return SteamVR_Controller.Input((int)trackedObj.index); }
-    }
-    
-    private void Awake() {
-        trackedObj = GetComponent<SteamVR_TrackedObject>();        
-    }
+    private GameObject parentObj;
+    private Transform[] children;
+    #endregion
 
-    void Start() {        
+
+    void Start() {
         canvasObj = transform.GetChild(0).gameObject;
         startingColors = backButton.colors;
+
+        objectMaterials = objectInHand.GetComponent<HighlightController>().materials;
+        objectInHand.GetComponentInChildren<Renderer>().material = objectMaterials[1];
+        eventControllerGO = GameObject.FindGameObjectWithTag("Event Controller");
+        eventController = eventControllerGO.GetComponent<EventController>();
+
+        parentObj = objectInHand.transform.parent.gameObject;
     }
 
     private void Update() {
@@ -46,42 +58,38 @@ public class ContextMenuSystem : MonoBehaviour {
         }
     }
 
-
-
     public void ExitButton() {
-        eventController = GameObject.FindGameObjectWithTag("Event Controller").GetComponent<EventController>();
+        objectInHand.GetComponentInChildren<Renderer>().material = objectMaterials[0];        
         eventController.myState = EventController.States.freeRoam;
         eventController.menuOpen = false;
-        Destroy(this);
+        children = null;
+        objectInHand = null;
+        Destroy(this.gameObject);
     }
 
-
-    //This will "grey out" the minus or plus button allowing us to use it or not based upon where it is in the hierarchy.
-    //private void SelectionHierarchyCheck() {
-    //    if (objectInHand.tag == "PasteHorizontal" || objectInHand.tag == "PasteVertical" || objectInHand.tag == "RinseBottle") {
-    //        if (objectInHand.transform.parent.tag != "PasteHorizontal" || objectInHand.transform.parent.tag != "PasteVertical" || objectInHand.transform.parent.tag != "RinseBottle") {
-    //            plusButton.interactable = false;
-    //        } else {
-    //            minusButton.interactable = false;
-    //        }
-    //    }
-    //}
-
     //When this button is selected, it will make the parent of the object in hand active.  This will show the group of objects switch to the highlighted material all at once.
-    //public void ExpandSelection() {
-    //    foreach (Transform child in transform.parent) {
-    //        Material[] materials = child.GetComponent<HighlightController>().materials;
-    //        child.GetComponent<Renderer>().material = materials[1];
-    //    }
-    //}
+    public void ExpandSelection() {                
+        children = parentObj.GetComponentsInChildren<Transform>();
+        foreach (Transform obj in children) {
+            if (obj.gameObject.GetComponent<Renderer>()) {
+                //print("The children transform is " + obj.name);
+                Material mat = obj.parent.gameObject.GetComponent<HighlightController>().materials[1];
+                obj.GetComponent<Renderer>().material = mat;
+            }
+        }
+        menuState = MenuStates.level_2;
+    }
 
-    //public void ShrinkSelection() {
-    //    foreach (Transform child in transform.parent) {
-    //        Material[] materials = child.GetComponent<HighlightController>().materials;
-    //        child.GetComponent<Renderer>().material = materials[0];
-    //    }
-    //    objectInHand.GetComponent<Renderer>().material = objectInHand.GetComponent<HighlightController>().materials[1];
-    //}
+    public void ShrinkSelection() {
+        foreach (Transform obj in children) {
+            if (obj.gameObject.GetComponent<Renderer>()) {                
+                Material mat = obj.parent.gameObject.GetComponent<HighlightController>().materials[0];
+                obj.GetComponent<Renderer>().material = mat;
+            }
+        }
+        objectInHand.GetComponentInChildren<Renderer>().material = objectMaterials[1];
+        menuState = MenuStates.level_1;
+    }
 
 
 }

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33831850005853172}
   - component: {fileID: 23326051330680348}
   - component: {fileID: 95410067343274144}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_Green Gum Care
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 33774664326737790}
   - component: {fileID: 23450145141130528}
   - component: {fileID: 95506166467009758}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_Green Gum Care
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 33349527949142300}
   - component: {fileID: 23511177013741532}
   - component: {fileID: 95327147048811392}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_Green Gum Care
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,9 +76,9 @@ GameObject:
   - component: {fileID: 54137282469404138}
   - component: {fileID: 65005615055305930}
   - component: {fileID: 114718366677094442}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (5)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 54797166817669714}
   - component: {fileID: 65500883252866824}
   - component: {fileID: 114924416679789782}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (1)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 33492138381933282}
   - component: {fileID: 23304834827624816}
   - component: {fileID: 95757198330907364}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_Green Gum Care
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,9 +130,9 @@ GameObject:
   - component: {fileID: 54074499438112530}
   - component: {fileID: 65661548468949352}
   - component: {fileID: 114089015394295968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (4)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,9 +148,9 @@ GameObject:
   - component: {fileID: 54872714354496986}
   - component: {fileID: 65698678535499452}
   - component: {fileID: 114313645596228042}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (6)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 33080588585765050}
   - component: {fileID: 23612669542786506}
   - component: {fileID: 95480881441590286}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_Green Gum Care
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 33928452945537744}
   - component: {fileID: 23810741915881034}
   - component: {fileID: 95249692285044920}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_Green Gum Care
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,9 +202,9 @@ GameObject:
   - component: {fileID: 54922106748537416}
   - component: {fileID: 65626094652224490}
   - component: {fileID: 114016542692126368}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (3)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,9 +220,9 @@ GameObject:
   - component: {fileID: 54755468296529066}
   - component: {fileID: 65781537361513210}
   - component: {fileID: 114254137116266196}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (7)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,9 +238,9 @@ GameObject:
   - component: {fileID: 54344845788450766}
   - component: {fileID: 65550465694217606}
   - component: {fileID: 114413121946857478}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,7 +253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4606241973820382}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottles_Green Gum Care
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 33247632994457382}
   - component: {fileID: 23471204850929758}
   - component: {fileID: 95552739958697572}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_Green Gum Care
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,9 +289,9 @@ GameObject:
   - component: {fileID: 54761269848843926}
   - component: {fileID: 65596442184479514}
   - component: {fileID: 114813387412911708}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle (2)
-  m_TagString: Untagged
+  m_TagString: Rinse_16oz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 33603445033365694}
   - component: {fileID: 23828053074882324}
   - component: {fileID: 95906890977320490}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rinse Bottle_Green Gum Care
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,6 +1259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: d02b4a1139786b347a90fdbe87fec749, type: 2}
   - {fileID: 2100000, guid: cba08fad97841f54eb91908edf96a2f5, type: 2}
@@ -1274,6 +1275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: d02b4a1139786b347a90fdbe87fec749, type: 2}
   - {fileID: 2100000, guid: cba08fad97841f54eb91908edf96a2f5, type: 2}
@@ -1289,6 +1291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: d02b4a1139786b347a90fdbe87fec749, type: 2}
   - {fileID: 2100000, guid: cba08fad97841f54eb91908edf96a2f5, type: 2}
@@ -1304,6 +1307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: d02b4a1139786b347a90fdbe87fec749, type: 2}
   - {fileID: 2100000, guid: cba08fad97841f54eb91908edf96a2f5, type: 2}
@@ -1319,6 +1323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: d02b4a1139786b347a90fdbe87fec749, type: 2}
   - {fileID: 2100000, guid: cba08fad97841f54eb91908edf96a2f5, type: 2}
@@ -1334,6 +1339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: d02b4a1139786b347a90fdbe87fec749, type: 2}
   - {fileID: 2100000, guid: cba08fad97841f54eb91908edf96a2f5, type: 2}
@@ -1349,6 +1355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: d02b4a1139786b347a90fdbe87fec749, type: 2}
   - {fileID: 2100000, guid: cba08fad97841f54eb91908edf96a2f5, type: 2}
@@ -1364,6 +1371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: d02b4a1139786b347a90fdbe87fec749, type: 2}
   - {fileID: 2100000, guid: cba08fad97841f54eb91908edf96a2f5, type: 2}

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114338612346806758}
   m_Layer: 0
   m_Name: EventController
-  m_TagString: Untagged
+  m_TagString: Event Controller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,10 @@ MonoBehaviour:
   left: {fileID: 0}
   right: {fileID: 0}
   myState: 0
+  shelfProducts: []
+  objects: []
   collidingObject: {fileID: 0}
   button: {fileID: 0}
   menuOpen: 0
   touchpadPressed: 0
+  laserHolderOff: 1

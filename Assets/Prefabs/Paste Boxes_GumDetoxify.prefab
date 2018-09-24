@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 54120535607542414}
   - component: {fileID: 65213550295611444}
   - component: {fileID: 114080500299494516}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (19)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,9 +40,9 @@ GameObject:
   - component: {fileID: 54033636876478832}
   - component: {fileID: 65477025973948600}
   - component: {fileID: 114142605637568472}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 4496323138686018}
   - component: {fileID: 33704968372189074}
   - component: {fileID: 23155478218718832}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 4534591806405728}
   - component: {fileID: 33848317974454028}
   - component: {fileID: 23711514956314562}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,9 +92,9 @@ GameObject:
   - component: {fileID: 54201637881612578}
   - component: {fileID: 65272432417179264}
   - component: {fileID: 114314969313682748}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (18)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4507147744535140}
   - component: {fileID: 33203957055721360}
   - component: {fileID: 23999119183888270}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,9 +127,9 @@ GameObject:
   - component: {fileID: 54208328619682948}
   - component: {fileID: 65585671335679256}
   - component: {fileID: 114058066620009328}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (1)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,9 +145,9 @@ GameObject:
   - component: {fileID: 54206838198413074}
   - component: {fileID: 65764288716140920}
   - component: {fileID: 114404443368793744}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (6)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,9 +163,9 @@ GameObject:
   - component: {fileID: 54947482363098334}
   - component: {fileID: 65571525603863176}
   - component: {fileID: 114327272287538884}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (4)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,9 +181,9 @@ GameObject:
   - component: {fileID: 54493648303094558}
   - component: {fileID: 65848608569066820}
   - component: {fileID: 114226975050534520}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (17)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 4309422613360030}
   - component: {fileID: 33146297870944956}
   - component: {fileID: 23857204810870908}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 4583877632321874}
   - component: {fileID: 33014069124547558}
   - component: {fileID: 23365343748351896}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,9 +233,9 @@ GameObject:
   - component: {fileID: 54452495764182568}
   - component: {fileID: 65375160834553530}
   - component: {fileID: 114623597380852946}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (11)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 4413222686701070}
   - component: {fileID: 33393983421072002}
   - component: {fileID: 23580566573721034}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 4927153896699634}
   - component: {fileID: 33716013214440702}
   - component: {fileID: 23089519219301250}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,9 +285,9 @@ GameObject:
   - component: {fileID: 54906790570782270}
   - component: {fileID: 65324024752264108}
   - component: {fileID: 114196497178566612}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (10)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,9 +303,9 @@ GameObject:
   - component: {fileID: 54049225663718504}
   - component: {fileID: 65037294190083110}
   - component: {fileID: 114274387082327564}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (20)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 4481855972857400}
   - component: {fileID: 33373206218960414}
   - component: {fileID: 23263697076809424}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 4210478508618374}
   - component: {fileID: 33332815091163214}
   - component: {fileID: 23677580309804526}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 4141046981261914}
   - component: {fileID: 33480268821542798}
   - component: {fileID: 23476907034307902}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,9 +372,9 @@ GameObject:
   - component: {fileID: 54734623055684888}
   - component: {fileID: 65796699323553444}
   - component: {fileID: 114842930310189016}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (7)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 4902103592952414}
   - component: {fileID: 33028492147708996}
   - component: {fileID: 23040596664465026}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,9 +407,9 @@ GameObject:
   - component: {fileID: 54660274787251808}
   - component: {fileID: 65126092918288460}
   - component: {fileID: 114082422464880552}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (5)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 4140257097194876}
   - component: {fileID: 33263390562634836}
   - component: {fileID: 23996185310565884}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 4636103513838906}
   - component: {fileID: 33895318613690974}
   - component: {fileID: 23401220854820976}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,9 +459,9 @@ GameObject:
   - component: {fileID: 54576151065690386}
   - component: {fileID: 65615373719058786}
   - component: {fileID: 114893463518479314}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (2)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -477,9 +477,9 @@ GameObject:
   - component: {fileID: 54681540249398206}
   - component: {fileID: 65729042340950028}
   - component: {fileID: 114311069082322236}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (15)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -495,9 +495,9 @@ GameObject:
   - component: {fileID: 54194113125960854}
   - component: {fileID: 65244158568714904}
   - component: {fileID: 114869553697598978}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (13)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 4368395665633080}
   - component: {fileID: 33770423219917508}
   - component: {fileID: 23246736168698322}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,9 +530,9 @@ GameObject:
   - component: {fileID: 54757294246856914}
   - component: {fileID: 65144101611546354}
   - component: {fileID: 114592318940451936}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (3)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 4091365238203174}
   - component: {fileID: 33496884383923798}
   - component: {fileID: 23708884083312876}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,9 +565,9 @@ GameObject:
   - component: {fileID: 54174158111242052}
   - component: {fileID: 65969360133338202}
   - component: {fileID: 114446705608370304}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (16)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 4483624550365508}
   - component: {fileID: 33149858125252918}
   - component: {fileID: 23538685824987908}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 4262773213873598}
   - component: {fileID: 33609958461561286}
   - component: {fileID: 23335371424889454}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,9 +617,9 @@ GameObject:
   - component: {fileID: 54742648347314780}
   - component: {fileID: 65737858753961480}
   - component: {fileID: 114935581862468004}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (8)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -635,9 +635,9 @@ GameObject:
   - component: {fileID: 54004261809007734}
   - component: {fileID: 65288624554186048}
   - component: {fileID: 114296198330889968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (14)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -653,9 +653,9 @@ GameObject:
   - component: {fileID: 54713948275151362}
   - component: {fileID: 65099328573732086}
   - component: {fileID: 114934231783646572}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (12)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -671,9 +671,9 @@ GameObject:
   - component: {fileID: 54536578364534030}
   - component: {fileID: 65004725558054784}
   - component: {fileID: 114562171670604054}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste_Box (9)
-  m_TagString: Untagged
+  m_TagString: PasteBox_4.1oz_Vertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -686,7 +686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4742080620675762}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Paste Boxes_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 4865515079602664}
   - component: {fileID: 33195215406995156}
   - component: {fileID: 23418808166705384}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 4179324750658864}
   - component: {fileID: 33851951004846938}
   - component: {fileID: 23449091631559190}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,7 +737,7 @@ GameObject:
   - component: {fileID: 4926055888010866}
   - component: {fileID: 33411151372462468}
   - component: {fileID: 23811876276020334}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 4211062956756622}
   - component: {fileID: 33936128685014806}
   - component: {fileID: 23963319734553466}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PasteBox_GumDetoxify
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2823,6 +2823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -2838,6 +2839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -2853,6 +2855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -2868,6 +2871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -2883,6 +2887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -2898,6 +2903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -2913,6 +2919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -2928,6 +2935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -2943,6 +2951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -2958,6 +2967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -2973,6 +2983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -2988,6 +2999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -3003,6 +3015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -3018,6 +3031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -3033,6 +3047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -3048,6 +3063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -3063,6 +3079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -3078,6 +3095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -3093,6 +3111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -3108,6 +3127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}
@@ -3123,6 +3143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInHand: 0
+  highlightOn: 0
   materials:
   - {fileID: 2100000, guid: 603223bc93f29974b9c4554a70f84f6e, type: 2}
   - {fileID: 2100000, guid: 663c2b6b5840a4046b9749f01500ffd0, type: 2}

@@ -13,6 +13,11 @@ TagManager:
   - CleanButton
   - Event Controller
   - Laser
+  - PasteBox_4.2oz_Horizontal
+  - PasteBox_4.1oz_Vertical
+  - Rinse_16oz
+  - Fixodent_2.4oz
+  - Toms_4.2oz
   layers:
   - Default
   - TransparentFX

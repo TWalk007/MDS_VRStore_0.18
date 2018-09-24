@@ -155,23 +155,32 @@ public class SteamVR_LaserPointer : MonoBehaviour {
     // This is a controller event subscription.  It executes when the event takes place.
     private void PadUnclicked(object sender, ClickedEventArgs e) {
         Button menuButton = eventController.button;
+        GameObject contextMenuSystemGO = GameObject.FindGameObjectWithTag("ContextMenuSystem");
+        ContextMenuSystem contextMenuSystem = contextMenuSystemGO.GetComponent<ContextMenuSystem>(); ;
         if (menuButton) {
             if (menuButton.name == "EXIT") {
-                Destroy(GameObject.FindGameObjectWithTag("ContextMenuSystem"));
+                // TODO Just the original object selected is unhighlighting.
+                eventController.TurnOffObjectHighlights();
+                eventController.ResetShelfProductsList();
+                Destroy(contextMenuSystemGO);
                 eventController.menuOpen = false;
                 eventController.myState = EventController.States.freeRoam;
                 eventController.laserHolderOff = false;
                 eventController.TurnOffLaserPointer();
+                eventController.TurnOnControllerBalls();
+
+
+
             } else if (menuButton.name == "BACK") {
-                eventController.contextMenuSystem.GetComponent<ContextMenuSystem>().menuState = ContextMenuSystem.MenuStates.level_1;
+                contextMenuSystem.menuState = ContextMenuSystem.MenuStates.level_1;
             } else if (menuButton.name == "NEXT") {
-                if (eventController.contextMenuSystem.GetComponent<ContextMenuSystem>().menuState == ContextMenuSystem.MenuStates.level_1) {
-                    eventController.contextMenuSystem.GetComponent<ContextMenuSystem>().menuState = ContextMenuSystem.MenuStates.level_2;
+                if (contextMenuSystem.menuState == ContextMenuSystem.MenuStates.level_1) {
+                    contextMenuSystem.menuState = ContextMenuSystem.MenuStates.level_2;
                 }
             } else if (menuButton.name == "PLUS") {
-                // Grow selection
+                contextMenuSystem.ExpandSelection();
             } else if (menuButton.name == "MINUS") {
-                // Shrink selection.
+                contextMenuSystem.ShrinkSelection();
             }
         }
     }
