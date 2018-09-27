@@ -59,9 +59,13 @@ MonoBehaviour:
   right: {fileID: 0}
   myState: 0
   shelfProducts: []
+  contextMenuScript: {fileID: 0}
   objects: []
   collidingObject: {fileID: 0}
+  objectSelected: {fileID: 0}
   button: {fileID: 0}
+  buttonClicked: {fileID: 0}
   menuOpen: 0
   touchpadPressed: 0
   laserHolderOff: 1
+  materialMenus: []

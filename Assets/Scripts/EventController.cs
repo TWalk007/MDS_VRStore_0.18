@@ -20,20 +20,30 @@ public class EventController : MonoBehaviour {
     [HideInInspector]
     public List<GameObject> shelfProducts = new List<GameObject>();
     [HideInInspector]
+    public ContextMenuSystem contextMenuScript;
+    [HideInInspector]
     public GameObject[] objects;
     [HideInInspector]
     public GameObject collidingObject;
     [HideInInspector]
+    public GameObject objectSelected;
+    [HideInInspector]
     public Button button;
+    [HideInInspector]
+    public Button buttonClicked;
     [HideInInspector]
     public bool menuOpen = false;
     [HideInInspector]
     public bool touchpadPressed = false;
     [HideInInspector]
     public bool laserHolderOff = true;
+    [HideInInspector]
+    public List<GameObject> materialMenus;
     #endregion
 
-    #region PRIVATE Variables
+    #region PRIVATE Variables    
+    bool objectInEitherHand = false;
+    private GameObject contextMenu;
     private bool parabolicPointerOn = true;
     private bool laserPointerOn = false;
     #endregion
@@ -41,14 +51,14 @@ public class EventController : MonoBehaviour {
     private void Update() {
 
         if (menuOpen) {
-            myState = States.menuActive;
+            myState = States.menuActive;            
         }
 
         if (!menuOpen) {
             //IF there is no colliding object in any instance of the ControllerGrabObject script (on either controller)
             //  THEN -> turn the freeRoam state back on.
             GameObject[] controllers = GameObject.FindGameObjectsWithTag("Controllers");
-            bool objectInEitherHand = false;
+            objectInEitherHand = false;
 
             foreach (GameObject obj in controllers) {
                 // IF there is a colliding object
@@ -62,7 +72,7 @@ public class EventController : MonoBehaviour {
             }
         }
 
-        if (myState == States.freeRoam) {
+        if (myState == States.freeRoam) {            
             if (!parabolicPointerOn) {
                 if (!menuOpen) {
                     TurnOnParabolicPointer();
@@ -74,38 +84,81 @@ public class EventController : MonoBehaviour {
                 TurnOffParabolicPointer();
             }
 
-            
+
             if (touchpadPressed) {
                 touchpadPressed = false;
                 if (!menuOpen) {
-
                     GameObject menuInScene = GameObject.FindGameObjectWithTag("ContextMenuSystem");
-
                     //If there is not menuInScene already, go ahead and create teh contextMenu gameobject.
                     if (menuInScene == null) {
-                        GameObject contextMenu = Instantiate(contextMenuSystem) as GameObject;
+                        contextMenu = Instantiate(contextMenuSystem) as GameObject;
                         Vector3 offsetPos = new Vector3(0, 0.25f, 0.25f);
-
-                        // the "Controller.transform.pos" was changed from "collidingObject.transform.position".
-                        // This could screw up the placement of the "UI Context Menu Sysem".
                         Vector3 newPos = collidingObject.transform.position + offsetPos;
                         contextMenu.transform.position = newPos;
-                        ContextMenuSystem contextMenuScript = contextMenu.GetComponent<ContextMenuSystem>();
-                        contextMenuScript.menuState = ContextMenuSystem.MenuStates.level_1;
 
+                        contextMenuScript = contextMenu.GetComponent<ContextMenuSystem>();
+                        contextMenuScript.menuState = ContextMenuSystem.SelectionStates.level_1;
                         TurnOffControllerBalls();
 
-                        contextMenuScript.objectInHand = collidingObject;
-
+                        ResetShelfProductsList();
                         shelfProducts.Add(collidingObject);
-                        collidingObject = null;
 
+                        contextMenuScript.contextMenuObjHighlighted = collidingObject;
+                        objectSelected = collidingObject;
+
+                        collidingObject = null;
                         myState = States.menuActive;
-                        menuOpen = true;                       
+                        menuOpen = true;
                     }
                 }
+                if (objectSelected.tag == "PasteBox_4.2oz_Horizontal") {
+                    // NOTE:  When you search using TAG it will search all project folders (including prefabs!!!).
+                    // This is why it could find it using the TAG and not the name.  I wasn't grabbing the instance!!!!
+                    GameObject contextMenuTemp = GameObject.Find("UIContextMenuSystem(Clone)");
+                    Transform[] transforms = contextMenuTemp.GetComponentsInChildren<Transform>();
+                    for (int i = 0; i < transforms.Length; i++) {
+                        if (transforms[i].gameObject.tag == "Menu_4.2oz_PasteBox_Horizontal") {
+                            //print("I found: "+ transforms[i].gameObject.name);
+                            transforms[i].gameObject.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+                            //print("The " + transforms[i].gameObject.name + " localScale is: " + transforms[i].gameObject.GetComponent<RectTransform>().localScale);
+                        }
+                    }
+                    #region TURN ON MATERIAL PANELS
+                } else if (objectSelected.tag == "PasteBox_4.1oz_Vertical") {
+                    GameObject contextMenuTemp = GameObject.Find("UIContextMenuSystem(Clone)");
+                    Transform[] transforms = contextMenuTemp.GetComponentsInChildren<Transform>();
+                    foreach (Transform trans in transforms) {
+                        if (trans.gameObject.tag == "Menu_4.1oz_PasteBox_Vertical") {
+                            trans.gameObject.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+                        }
+                    }
+                } else if (objectSelected.tag == "Rinse_16oz") {
+                    GameObject contextMenuTemp = GameObject.Find("UIContextMenuSystem(Clone)");
+                    Transform[] transforms = contextMenuTemp.GetComponentsInChildren<Transform>();
+                    foreach (Transform trans in transforms) {
+                        if (trans.gameObject.tag == "Menu_16oz_Rinse") {
+                            trans.gameObject.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+                        }
+                    }
+                } else if (objectSelected.tag == "Fixodent_2.4oz") {
+                    GameObject contextMenuTemp = GameObject.Find("UIContextMenuSystem(Clone)");
+                    Transform[] transforms = contextMenuTemp.GetComponentsInChildren<Transform>();
+                    foreach (Transform trans in transforms) {
+                        if (trans.gameObject.tag == "Menu_Fixodent") {
+                            trans.gameObject.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+                        }
+                    }
+                } else if (objectSelected.tag == "Toms_4.7oz") {
+                    GameObject contextMenuTemp = GameObject.Find("UIContextMenuSystem(Clone)");
+                    Transform[] transforms = contextMenuTemp.GetComponentsInChildren<Transform>();
+                    foreach (Transform trans in transforms) {
+                        if (trans.gameObject.tag == "Menu_4.7oz_PasteBox") {
+                            trans.gameObject.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+                        }
+                    }
+                }
+                #endregion
             }
-
 
         } else if (myState == States.objectInHand) {
             if (parabolicPointerOn) {
@@ -121,18 +174,23 @@ public class EventController : MonoBehaviour {
                 TurnOnLaserPointer();
             }
         }
-    }
+    }       
 
-    public void TurnOffObjectHighlights() {
-        // Create a list of all objects that get highlighted.
-        // When finished working in the menu iterate through the list and unhighlight the items.
-        // Clear the List.
-        //print("Beginning to clear object highlights...");
-        foreach (var item in shelfProducts) {
-            Material unHighlightedMaterial = item.gameObject.GetComponent<HighlightController>().materials[0];
-            item.GetComponentInChildren<Renderer>().material = unHighlightedMaterial;
-            //print("Object " + item.name + " is no longer highlighted.");
+    public void DestroyContextMenu() {
+        contextMenuScript.TurnOffObjectHighlights();
+        TurnOnControllerBalls();
+        laserHolderOff = false;
+        TurnOffLaserPointer();
+        menuOpen = false;
+        objectSelected = null;
+        objectInEitherHand = false;
+        if (left) {
+            left.GetComponent<ControllerGrabObject>().collidingObject = null;
         }
+        if (right) {
+            right.GetComponent<ControllerGrabObject>().collidingObject = null;
+        }
+        Destroy (contextMenu);
     }
 
     public void ResetShelfProductsList() {

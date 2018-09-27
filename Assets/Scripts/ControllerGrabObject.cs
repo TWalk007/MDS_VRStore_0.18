@@ -32,12 +32,12 @@ public class ControllerGrabObject : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other) {
         SetCollidingObject(other);
-
         eventController.myState = EventController.States.objectHighlighted;
     }
 
     public void OnTriggerStay(Collider other) {
         SetCollidingObject(other);
+        eventController.myState = EventController.States.objectHighlighted;
     }
 
     public void OnTriggerExit(Collider other) {

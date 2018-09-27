@@ -156,31 +156,14 @@ public class SteamVR_LaserPointer : MonoBehaviour {
     private void PadUnclicked(object sender, ClickedEventArgs e) {
         Button menuButton = eventController.button;
         GameObject contextMenuSystemGO = GameObject.FindGameObjectWithTag("ContextMenuSystem");
-        ContextMenuSystem contextMenuSystem = contextMenuSystemGO.GetComponent<ContextMenuSystem>(); ;
+        ContextMenuSystem contextMenuSystem = contextMenuSystemGO.GetComponent<ContextMenuSystem>();
         if (menuButton) {
             if (menuButton.name == "EXIT") {
-                // TODO Just the original object selected is unhighlighting.
-                eventController.TurnOffObjectHighlights();
-                eventController.ResetShelfProductsList();
-                Destroy(contextMenuSystemGO);
-                eventController.menuOpen = false;
-                eventController.myState = EventController.States.freeRoam;
-                eventController.laserHolderOff = false;
-                eventController.TurnOffLaserPointer();
-                eventController.TurnOnControllerBalls();
+                eventController.DestroyContextMenu();
 
-
-
-            } else if (menuButton.name == "BACK") {
-                contextMenuSystem.menuState = ContextMenuSystem.MenuStates.level_1;
-            } else if (menuButton.name == "NEXT") {
-                if (contextMenuSystem.menuState == ContextMenuSystem.MenuStates.level_1) {
-                    contextMenuSystem.menuState = ContextMenuSystem.MenuStates.level_2;
-                }
-            } else if (menuButton.name == "PLUS") {
-                contextMenuSystem.ExpandSelection();
-            } else if (menuButton.name == "MINUS") {
-                contextMenuSystem.ShrinkSelection();
+            } else {
+                eventController.buttonClicked = menuButton;
+                contextMenuSystem.IsButtonClicked = true;
             }
         }
     }

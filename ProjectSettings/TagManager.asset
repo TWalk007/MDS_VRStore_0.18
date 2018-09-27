@@ -17,7 +17,13 @@ TagManager:
   - PasteBox_4.1oz_Vertical
   - Rinse_16oz
   - Fixodent_2.4oz
-  - Toms_4.2oz
+  - Toms_4.7oz
+  - MaterialMenu
+  - Menu_4.2oz_PasteBox_Horizontal
+  - Menu_4.1oz_PasteBox_Vertical
+  - Menu_4.7oz_PasteBox
+  - Menu_16oz_Rinse
+  - Menu_Fixodent
   layers:
   - Default
   - TransparentFX
