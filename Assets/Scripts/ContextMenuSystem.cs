@@ -10,14 +10,9 @@ public class ContextMenuSystem : MonoBehaviour {
     public Button nextButton;
     public Button plusButton;
     public Button minusButton;
-
-    //[Header("Context Sensitive Menus")]
-    //public GameObject pasteBox4OzHoriz;
-    //public GameObject pasteBox4OzVert;
-    //public GameObject pasteBox47OzToms;
-    //public GameObject pasteBoxFixodent;
-    //public GameObject Rinse16Oz;
-
+    
+    [HideInInspector]
+    GameObject prefab;
 
     [Header("Prefabs for Material Swapping")]
     public GameObject[] prefabs;
@@ -33,9 +28,6 @@ public class ContextMenuSystem : MonoBehaviour {
     
     [HideInInspector]
     public GameObject parentObj;
-
-    //[Header("Material Menu Panels")]
-    //public GameObject[] materialMenus;
 
     [HideInInspector]
     public List<GameObject> materialMenuList;
@@ -61,10 +53,8 @@ public class ContextMenuSystem : MonoBehaviour {
         eventControllerGO = GameObject.FindGameObjectWithTag("Event Controller");
         eventController = eventControllerGO.GetComponent<EventController>();
         parentObj = contextMenuObjHighlighted.transform.parent.gameObject;
-        
-        //This didn't work because it was happening AFTER it already adjusted the Material Menu panels scale.
-        //Essentially it was putting the scale back at ZERO after I already set it to 1,1,1.  So it's turned off.
-        //PopulateMaterialMenuArray();
+
+        PopulateMaterialMenuArray();        PopulateMaterialMenuArray();
     }
 
     private void Update() {
@@ -95,7 +85,7 @@ public class ContextMenuSystem : MonoBehaviour {
         } else if (eventController.buttonClicked.name == "BACK") {
             if (menuState == ContextMenuSystem.SelectionStates.level_2) {
                 menuState = ContextMenuSystem.SelectionStates.level_1;
-            }        
+            }
         } else if (eventController.buttonClicked.name == "PLUS") {
             ExpandSelection();
         } else if (eventController.buttonClicked.name == "MINUS") {
@@ -103,39 +93,106 @@ public class ContextMenuSystem : MonoBehaviour {
 
             //TODO// Nothing happens here as there is only a single piece of art.
         } else if (eventController.buttonClicked.name == "ProHealth_4.2oz_HealthyFresh") {
-            
-        //TODO//  Still need to add this artwork.
+
+            //TODO//  Still need to add this artwork.
         } else if (eventController.buttonClicked.name == "ProHealth_4.2oz_Clinical") {
 
         } else if (eventController.buttonClicked.name == "GumDetoxify_OrigMint") {
-            // When updating object's material it will need to:
-            //  1) Find the ProHealth 4.2oz_HealthyFresh materials and put them to a new Materials[] variable.
-            //  2) Update the object's parent's HighlightController script to the correct materials.
-            //  3) Change the material to the highlighted material from it's HighlightController.
-
-
+            for (int i = 0; i < this.prefabs.Length; i++) {
+                if (this.prefabs[i].name == "PasteBox_4.1oz_GumDetoxify_OrigMint") {
+                    prefab = this.prefabs[i];
+                }
+            }
+            UpdateMaterials(prefab);
 
         } else if (eventController.buttonClicked.name == "GumDetoxify_GentleWht") {
+            for (int i = 0; i < this.prefabs.Length; i++) {
+                if (this.prefabs[i].name == "PasteBox_4.1oz_GumDetoxify_GentleWht") {
+                    prefab = this.prefabs[i];
+                }
+            }
+            UpdateMaterials(prefab);
 
         } else if (eventController.buttonClicked.name == "GumDetoxify_ExtraFresh") {
+            for (int i = 0; i < this.prefabs.Length; i++) {
+                if (this.prefabs[i].name == "PasteBox_4.1oz_GumDetoxify_ExtraFresh") {
+                    prefab = this.prefabs[i];
+                }
+            }
+            UpdateMaterials(prefab);
 
         } else if (eventController.buttonClicked.name == "Toms_AntiPlqWht") {
+            for (int i = 0; i < this.prefabs.Length; i++) {
+                if (this.prefabs[i].name == "PasteBox_4.7oz_Toms_AntiPlqWht") {
+                    prefab = this.prefabs[i];
+                }
+            }
+            UpdateMaterials(prefab);
 
         } else if (eventController.buttonClicked.name == "Toms_Sensitive") {
+            for (int i = 0; i < this.prefabs.Length; i++) {
+                if (this.prefabs[i].name == "PasteBox_4.7oz_Toms_Sensitive") {
+                    prefab = this.prefabs[i];
+                }
+            }
+            UpdateMaterials(prefab);
 
         } else if (eventController.buttonClicked.name == "Toms_SimplyWht") {
+            for (int i = 0; i < this.prefabs.Length; i++) {
+                if (this.prefabs[i].name == "PasteBox_4.7oz_Toms_SimplyWht") {
+                    prefab = this.prefabs[i];
+                }
+            }
+            UpdateMaterials(prefab);
 
         } else if (eventController.buttonClicked.name == "Toms_WholeCare") {
+            for (int i = 0; i < this.prefabs.Length; i++) {
+                if (this.prefabs[i].name == "PasteBox_4.7oz_Toms_WholeCare") {
+                    prefab = this.prefabs[i];
+                }
+            }
+            UpdateMaterials(prefab);
 
         } else if (eventController.buttonClicked.name == "Rinse_GlamWht") {
+            for (int i = 0; i < this.prefabs.Length; i++) {
+                if (this.prefabs[i].name == "RinseBottle_16oz_3DWhite_Burgundy") {
+                    prefab = this.prefabs[i];
+                }
+            }
+            UpdateMaterials(prefab);
 
-        } else if (eventController.buttonClicked.name == "Rinse_GumCare") {
 
-        } else if (eventController.buttonClicked.name == "Rinse_GumCare2") {
+        } else if (eventController.buttonClicked.name == "Rinse_GumCare_Blue") {
+            for (int i = 0; i < this.prefabs.Length; i++) {
+                if (this.prefabs[i].name == "RinseBottle_16oz_GumCare_Blue") {
+                    prefab = this.prefabs[i];
+                }
+            }
+            UpdateMaterials(prefab);
+
+        } else if (eventController.buttonClicked.name == "Rinse_GumCare_Green") {
+            for (int i = 0; i < this.prefabs.Length; i++) {
+                if (this.prefabs[i].name == "RinseBottle_16oz_GumCare_Green") {
+                    prefab = this.prefabs[i];
+                }
+            }
+            UpdateMaterials(prefab);
 
         } else if (eventController.buttonClicked.name == "Fixodent_Original") {
+            for (int i = 0; i < this.prefabs.Length; i++) {
+                if (this.prefabs[i].name == "PasteBox_2.4oz_Fixodent_Original") {
+                    prefab = this.prefabs[i];
+                }
+            }
+            UpdateMaterials(prefab);
 
         } else if (eventController.buttonClicked.name == "Fixodent_Free") {
+            for (int i = 0; i < this.prefabs.Length; i++) {
+                if (this.prefabs[i].name == "PasteBox_2.4oz_Fixodent_Free") {
+                    prefab = this.prefabs[i];
+                }
+            }
+            UpdateMaterials(prefab);
 
         } else {
             print("IdentifyProductType(): Product Type unknown!");
@@ -171,8 +228,6 @@ public class ContextMenuSystem : MonoBehaviour {
         }
     }
 
-    //When this button is selected, it will make the parent of the object in hand active.
-    //This will show the group of objects switch to the highlighted material all at once.
     public void ExpandSelection() {                
         children = parentObj.GetComponentsInChildren<Transform>();
         foreach (Transform obj in children) {
@@ -197,18 +252,13 @@ public class ContextMenuSystem : MonoBehaviour {
             menuState = SelectionStates.level_1;
         }        
     }
-
-
-    //This didn't work because it was happening AFTER it already adjusted the Material Menu panels scale.
-    //Essentially it was putting the scale back at ZERO after I already set it to 1,1,1.  So it's turned off.
-    //private void PopulateMaterialMenuArray() {
-    //    Transform[] transforms = GetComponentsInChildren<Transform>();
-    //    foreach (Transform trans in transforms) {
-    //        if (trans.gameObject.tag == "MaterialMenu") {
-    //            eventController.contextMenuSystem.GetComponent<ContextMenuSystem>().materialMenuList.Add(trans.gameObject);
-    //            //print(trans.gameObject.name);
-    //            trans.GetChild(0).gameObject.GetComponent<RectTransform>().localScale = new Vector3(0f, 0f, 0f);
-    //        }
-    //    }
-    //}
+     
+    private void PopulateMaterialMenuArray() {
+        Transform[] transforms = GetComponentsInChildren<Transform>();
+        foreach (Transform trans in transforms) {
+            if (trans.gameObject.tag == "MaterialMenu") {
+                eventController.contextMenuSystem.GetComponent<ContextMenuSystem>().materialMenuList.Add(trans.gameObject);
+            }
+        }
+    }
 }
