@@ -51,6 +51,7 @@ public class ControllerGrabObject : MonoBehaviour {
     private void GrabObject() {
         objectInHand = collidingObject;
         collidingObject = null;
+        eventController.objectInHand = true;
 
         var joint = AddFixedJoint();
         joint.connectedBody = objectInHand.GetComponent<Rigidbody>();
@@ -80,7 +81,7 @@ public class ControllerGrabObject : MonoBehaviour {
         if (objectInHand.GetComponent<HighlightController>()) {
             objectInHand.GetComponent<HighlightController>().objectInHand = objectInHandCheck;
         }
-
+        eventController.objectInHand = false;
         objectInHand = null;        
     }
 

@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 114060730456871246}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (8)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 114004869380474344}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (4)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 114908852516219492}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (7)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 114226055209651844}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (9)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 114163105110068168}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (2)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 114191950285078208}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (11)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 114965622136998104}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (5)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 114512355587466344}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (19)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 114452957275685080}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (10)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 114726254196947746}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (23)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 114211543160271134}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (3)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 114110627894084732}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (16)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 114384386487516188}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (17)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 114997103642076086}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (20)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -546,7 +546,7 @@ GameObject:
   - component: {fileID: 114401383864690336}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (22)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 114718311474695972}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (12)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 114876042513347924}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (21)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 114555627150322630}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (13)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 114306870978140880}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (6)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 114468654707075588}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (1)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -705,7 +705,7 @@ GameObject:
   - component: {fileID: 114713965106198288}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (15)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -723,7 +723,7 @@ GameObject:
   - component: {fileID: 114721079549624512}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 114159584649003948}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (14)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -827,7 +827,7 @@ GameObject:
   - component: {fileID: 114960798225347246}
   m_Layer: 10
   m_Name: PasteBox_4.6oz_KidsCrest_SparkleFun (18)
-  m_TagString: PasteBox_4.2oz_Horizontal
+  m_TagString: PasteBox_4.6oz_KidsCrest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

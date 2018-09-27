@@ -3995,8 +3995,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4045633131543328}
-  - component: {fileID: 65927525567215540}
   - component: {fileID: 54796337595238234}
+  - component: {fileID: 65927525567215540}
   m_Layer: 0
   m_Name: Gondola_Empty_01
   m_TagString: Untagged
@@ -21192,5 +21192,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.4499788, y: 2.120896, z: 0.5019615}
-  m_Center: {x: -0.00015687943, y: 1.0650936, z: 0.2490193}
+  m_Size: {x: 2.4499788, y: 5.9172053, z: 1.1892853}
+  m_Center: {x: -0.00015687943, y: 2.9039595, z: -0.09464267}

@@ -19,7 +19,7 @@ public class SteamVR_LaserPointer : MonoBehaviour {
     public EventController eventController;
     public bool active = true;
     public Color color;
-    public float thickness = 0.002f;
+    public float thickness = 0.001f;
     public GameObject holder;
     public GameObject pointer;
     bool isActive = false;
@@ -37,11 +37,11 @@ public class SteamVR_LaserPointer : MonoBehaviour {
 
     private void OnEnable() {
         controller = GetComponent<SteamVR_TrackedController>();
-        controller.PadUnclicked += PadUnclicked;
+        controller.PadClicked += PadClicked;
     }
 
     private void OnDisable() {
-        controller.PadUnclicked -= PadUnclicked;
+        controller.PadUnclicked -= PadClicked;
     }
 
     
@@ -56,7 +56,7 @@ public class SteamVR_LaserPointer : MonoBehaviour {
         pointer = GameObject.CreatePrimitive(PrimitiveType.Cube);
         pointer.transform.parent = holder.transform;
         pointer.transform.localScale = new Vector3(thickness, thickness, 100f);
-        pointer.transform.localPosition = new Vector3(0f, 0f, 50f);
+        pointer.transform.localPosition = new Vector3(0f, 0f, 100f);
         pointer.transform.localRotation = Quaternion.identity;
         BoxCollider collider = pointer.GetComponent<BoxCollider>();
         if (addRigidBody) {
@@ -73,6 +73,7 @@ public class SteamVR_LaserPointer : MonoBehaviour {
         Material newMaterial = new Material(Shader.Find("Unlit/Color"));
         newMaterial.SetColor("_Color", color);
         pointer.GetComponent<MeshRenderer>().material = newMaterial;
+        eventController = GameObject.FindGameObjectWithTag("Event Controller").GetComponent<EventController>();
     }
 
     public virtual void OnPointerIn(PointerEventArgs e) {
@@ -132,12 +133,12 @@ public class SteamVR_LaserPointer : MonoBehaviour {
 
             // Places the button variable into the event controller as a placeholder.  This allows
             // both controllers to access the same variable for reference so they aren't duplicating events.
-            if (hit.transform.tag == "Button") {
+            if (hit.transform.tag == "Button") {                
                 eventController.button = hit.transform.gameObject.GetComponent<Button>();                
                 eventController.button.OnSelect(new BaseEventData(EventSystem.current));                
             }
             if (hit.transform.tag != "Button") {
-                if (eventController.button != null) {
+                if (eventController.button != null) {                    
                     eventController.button.GetComponent<Button>().OnDeselect(new BaseEventData(EventSystem.current));
                 }                
             }
@@ -153,18 +154,24 @@ public class SteamVR_LaserPointer : MonoBehaviour {
     }
 
     // This is a controller event subscription.  It executes when the event takes place.
-    private void PadUnclicked(object sender, ClickedEventArgs e) {
-        Button menuButton = eventController.button;
-        GameObject contextMenuSystemGO = GameObject.FindGameObjectWithTag("ContextMenuSystem");
-        ContextMenuSystem contextMenuSystem = contextMenuSystemGO.GetComponent<ContextMenuSystem>();
-        if (menuButton) {
-            if (menuButton.name == "EXIT") {
-                eventController.DestroyContextMenu();
+    private void PadClicked(object sender, ClickedEventArgs e) {
+        if (hit.transform.tag == "Button") {
+            Button menuButton = eventController.button;
+            GameObject contextMenuSystemGO = GameObject.FindGameObjectWithTag("ContextMenuSystem");
+            ContextMenuSystem contextMenuSystem = contextMenuSystemGO.GetComponent<ContextMenuSystem>();
+            if (menuButton) {
+                if (menuButton.name == "EXIT") {
+                    eventController.DestroyContextMenu();
 
-            } else {
-                eventController.buttonClicked = menuButton;
-                contextMenuSystem.IsButtonClicked = true;
+                } else {
+                    eventController.buttonClicked = menuButton;
+                    contextMenuSystem.IsButtonClicked = true;
+                }
             }
         }
+        if (hit.transform.tag != "Button") {
+            eventController.DestroyContextMenu();
+        }
     }
+
 }

@@ -54,7 +54,7 @@ public class ContextMenuSystem : MonoBehaviour {
         eventController = eventControllerGO.GetComponent<EventController>();
         parentObj = contextMenuObjHighlighted.transform.parent.gameObject;
 
-        PopulateMaterialMenuArray();        PopulateMaterialMenuArray();
+        PopulateMaterialMenuArray();
     }
 
     private void Update() {

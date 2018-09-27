@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4028968272069798}
-  - component: {fileID: 65398469532465634}
   - component: {fileID: 54279720019700584}
+  - component: {fileID: 65398469532465634}
   m_Layer: 0
   m_Name: Aisle Blocker
   m_TagString: Untagged
@@ -66,5 +66,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.362514, y: 2.1745462, z: 0.847744}
-  m_Center: {x: 0.029000998, y: 0.18125677, z: 0.40239048}
+  m_Size: {x: 1.362514, y: 5.0696907, z: 0.847744}
+  m_Center: {x: 0.029000998, y: 1.628829, z: 0.40239048}
